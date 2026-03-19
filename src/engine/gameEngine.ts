@@ -79,9 +79,9 @@ export function createInitialPlayers(): Player[] {
     def('defA5', 'A', 'Alves',   DA.x45, Y.p70, Y.p50, Y.p90),
 
     str('strA1', 'A', 'Messi',   SP.A_far.xMin, L[0], SP.A_far.xMin, SP.A_far.xMax),
-    str('strA2', 'A', 'Torres',  SP.A_far.xMin, L[1], SP.A_far.xMin, SP.A_far.xMax),
+    str('strA2', 'A', 'Torres',  SP.A_hlf.xMin, L[1], SP.A_hlf.xMin, SP.A_hlf.xMax),
     str('strA3', 'A', 'Iniesta', SP.A_ctr.xMin, L[2], SP.A_ctr.xMin, SP.A_ctr.xMax, true),
-    str('strA4', 'A', 'Xavi',    SP.A_far.xMin, L[3], SP.A_far.xMin, SP.A_far.xMax),
+    str('strA4', 'A', 'Xavi',    SP.A_hlf.xMin, L[3], SP.A_hlf.xMin, SP.A_hlf.xMax),
     str('strA5', 'A', 'Villa',   SP.A_far.xMin, L[4], SP.A_far.xMin, SP.A_far.xMax),
 
     // ── Team B ──────────────────────────────────────────────────────────────
@@ -97,9 +97,9 @@ export function createInitialPlayers(): Player[] {
     def('defB5', 'B', 'Boateng',  DB.x45, Y.p70, Y.p50, Y.p90),
 
     str('strB1', 'B', 'Rooney', SP.B_far.xMax, L[0], SP.B_far.xMin, SP.B_far.xMax),
-    str('strB2', 'B', 'Müller', SP.B_far.xMax, L[1], SP.B_far.xMin, SP.B_far.xMax),
+    str('strB2', 'B', 'Müller', SP.B_hlf.xMax, L[1], SP.B_hlf.xMin, SP.B_hlf.xMax),
     str('strB3', 'B', 'Klose',  SP.B_ctr.xMax, L[2], SP.B_ctr.xMin, SP.B_ctr.xMax),
-    str('strB4', 'B', 'Ribéry', SP.B_far.xMax, L[3], SP.B_far.xMin, SP.B_far.xMax),
+    str('strB4', 'B', 'Ribéry', SP.B_hlf.xMax, L[3], SP.B_hlf.xMin, SP.B_hlf.xMax),
     str('strB5', 'B', 'Özil',   SP.B_far.xMax, L[4], SP.B_far.xMin, SP.B_far.xMax),
   ]
 }

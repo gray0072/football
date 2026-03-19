@@ -163,12 +163,6 @@ export function Field() {
         {/* Players — drawn before ball so ball appears on top */}
         {players.map(p => <StickFigure key={p.id} p={p} tick={tickCount} />)}
 
-        {/* Ball glow when in flight */}
-        {ball.inFlight && (
-          <circle cx={ballPos.x} cy={ballPos.y} r={13}
-            fill="none" stroke="rgba(251,191,36,0.35)" strokeWidth={2} />
-        )}
-
         {/* Ball */}
         <circle cx={ballPos.x} cy={ballPos.y} r={6} fill="#fff" />
       </svg>

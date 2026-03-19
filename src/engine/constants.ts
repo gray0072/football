@@ -36,14 +36,14 @@ export const RADIUS = {
 
 // ─── Per-tick probabilities ───────────────────────────────────────────────────
 export const CHANCE = {
-  gkThrow:   0.04,
-  defPass:   0.12,
-  strShoot:  0.10,
-  strPass:   0.04,
-  intercept: 0.22,
-  gkCatch:   0.45,
-  defSteal:  0.07,
-  strSteal:  0.025,
+  gkThrow:   0.04,   // per tick: GK launches a throw-in after ball goes out
+  defPass:   0.12,   // per tick: defender with ball attempts a forward pass
+  strShoot:  0.10,   // per tick: striker decides to shoot (when in range)
+  strPass:   0.04,   // per tick: striker decides to pass instead of dribbling
+  intercept: 0.22,   // per tick: defender in range intercepts a flying ball
+  gkCatch:   0.45,   // per tick: GK in range catches a shot on target
+  defSteal:  0.07,   // per tick: defender adjacent to ball carrier steals the ball
+  strSteal:  0.025,  // per tick: striker adjacent to ball carrier steals the ball
 }
 
 // ─── Shot / pass accuracy (noise angle in radians) ────────────────────────────
@@ -108,10 +108,12 @@ export const STR_LANES = ([1, 2, 3, 4, 5] as const).map(i => py(i / 6))
  *   _far — wing strikers    (wider starting position)
  */
 export const STR_PATROL = {
-  A_ctr: { xMin: px(0.50), xMax: px(0.80) },   // 500 – 767
-  A_far: { xMin: px(0.30), xMax: px(0.60) },   // 322 – 589
-  B_ctr: { xMin: px(0.20), xMax: px(0.50) },   // 233 – 500
-  B_far: { xMin: px(0.40), xMax: px(0.70) },   // 411 – 678
+  A_ctr: { xMin: px(0.50), xMax: px(0.80) },
+  A_hlf: { xMin: px(0.40), xMax: px(0.70) },
+  A_far: { xMin: px(0.30), xMax: px(0.60) },
+  B_ctr: { xMin: px(0.20), xMax: px(0.50) },
+  B_hlf: { xMin: px(0.30), xMax: px(0.60) },
+  B_far: { xMin: px(0.40), xMax: px(0.70) },
 }
 
 /** Target x a striker dribbles toward when they have the ball (fraction → px) */
