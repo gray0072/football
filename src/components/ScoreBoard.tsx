@@ -28,7 +28,7 @@ export function ScoreBoard() {
       flexShrink: 0,
       position: 'relative',
     }}>
-      {/* Centered score block */}
+      {/* Absolutely centered: symmetric TEAM A | score | TEAM B */}
       <div style={{
         position: 'absolute',
         left: '50%',
@@ -36,11 +36,11 @@ export function ScoreBoard() {
         display: 'flex',
         alignItems: 'center',
         gap: '16px',
+        pointerEvents: 'none',
       }}>
         <div style={{ fontSize: '13px', color: '#ef4444', fontWeight: 700, letterSpacing: 1 }}>
           TEAM A
         </div>
-
         <div style={{
           fontSize: '34px',
           fontWeight: 'bold',
@@ -52,18 +52,17 @@ export function ScoreBoard() {
         }}>
           {scoreA} : {scoreB}
         </div>
-
         <div style={{ fontSize: '13px', color: '#3b82f6', fontWeight: 700, letterSpacing: 1 }}>
           TEAM B
         </div>
-
-        <div style={{ fontSize: '14px', color: '#6b7280', minWidth: '60px', textAlign: 'center' }}>
-          {timeStr}
-        </div>
       </div>
 
-      {/* Right-side controls */}
+      {/* Right-side controls (time + buttons) */}
       <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ fontSize: '14px', color: '#6b7280', minWidth: '44px', textAlign: 'right' }}>
+          {timeStr}
+        </div>
+
         <button
           onClick={toggleRunning}
           disabled={matchOver}
